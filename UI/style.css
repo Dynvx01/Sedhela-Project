@@ -7,7 +7,7 @@
 }
 
 body {
-    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Poppins';
     background: #fafafa;
     min-height: 100vh;
     display: flex;
@@ -40,38 +40,29 @@ body {
         0 12px 28px rgba(0, 0, 0, 0.15);
 }
 
-.login-header {
-    text-align: center;
-    margin-bottom: 32px;
-    color: #248EFE;
-    font-family: "Starlight Romance";
-    font-size: 32px;
-    font-style: ;
-    font-weight: 100;
-    line-height: normal;
-}
 .login-instruction {
     text-align: center;
-    margin-bottom: 32px;
+    margin-left: auto;
+    margin-right:auto;
+    margin-bottom: 30px;
     color: #000000;
-    font-family: "montserrat";
+    font-family: "poppins";
     font-size: 15px;
-    font-style: normal;
-    font-weight: 400;
+    font-style:normal;
+    font-weight: 700;
     line-height: normal;
 }
 
 .material-logo {
-    margin-bottom: 24px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     justify-content: center;
+    align-items: center;
+   
 }
 
-.logo-layers {
-    position: relative;
-    width: 56px;
-    height: 56px;
-}
 
 .layer {
     position: absolute;
@@ -386,10 +377,10 @@ body {
 .forgot-password {
     color: #1976d2;
     text-decoration: none;
+    font-family: "poppins";
     font-size: 14px;
     font-weight: 500;
     transition: color 0.2s ease;
-    text-transform: uppercase;
     letter-spacing: 0.25px;
 }
 
@@ -442,6 +433,7 @@ body {
     position: relative;
     z-index: 1;
     transition: opacity 0.2s ease;
+    font-family: "poppins";
 }
 
 .btn-loader {
