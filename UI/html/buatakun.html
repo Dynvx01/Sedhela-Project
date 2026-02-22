@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buat Akun - Sedela</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<!--MAIN REGISTER PAGE CONTENT-->
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <h1>Sedela</h1>
+                <p>Isi informasi berikut untuk membuat akun baru</p>
+            </div>
+
+            <form class="login-form" id="registerForm" novalidate>
+                <div class="form-group">
+                    <div class="input-wrapper">
+                        <input type="text" id="fullName" name="fullName" required>
+                        <label for="fullName">Nama Lengkap</label>
+                        <div class="input-line"></div>
+                        <div class="ripple-container"></div>
+                    </div>
+                    <span class="error-message" id="fullNameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <div class="input-wrapper">
+                        <input type="email" id="regEmail" name="email" required>
+                        <label for="regEmail">Email</label>
+                        <div class="input-line"></div>
+                        <div class="ripple-container"></div>
+                    </div>
+                    <span class="error-message" id="regEmailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <div class="input-wrapper password-wrapper">
+                        <input type="password" id="regPassword" name="password" required>
+                        <label for="regPassword">Kata Sandi</label>
+                        <div class="input-line"></div>
+                        <button type="button" class="password-toggle" id="regPasswordToggle" aria-label="Toggle password visibility">
+                            <div class="toggle-ripple"></div>
+                            <span class="toggle-icon"></span>
+                        </button>
+                        <div class="ripple-container"></div>
+                    </div>
+                    <span class="error-message" id="regPasswordError"></span>
+                </div>
+
+                <button type="submit" class="login-btn material-btn">
+                    <div class="btn-ripple"></div>
+                    <span class="btn-text">DAFTAR</span>
+                    <div class="btn-loader">
+                        <svg class="loader-circle" viewBox="0 0 50 50">
+                            <circle class="loader-path" cx="25" cy="25" r="12" fill="none" stroke="currentColor" stroke-width="3"/>
+                        </svg>
+                    </div>
+                </button>
+            </form>
+
+            <div class="signup-link">
+                <p>Sudah Punya Akun? <a href="index.html" class="login-link">Masuk</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../shared/js/form-utils.js"></script>
+    <script src="register.js"></script>
+</body>
+<!--END REGISTER PAGE CONTENT-->
+</html>
