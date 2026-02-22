@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lupa Kata Sandi - Sedela</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="login-container">
+    <div class="login-card">
+        <div class="login-header">
+            <h1>Sedela</h1>
+            <p>Masukkan Email untuk Reset Kata Sandi</p>
+        </div>
+
+        <form id="forgotForm">
+            <div class="form-group">
+                <div class="input-wrapper">
+                    <input type="email" id="email" required>
+                    <label>Email</label>
+                    <div class="input-line"></div>
+                </div>
+            </div>
+
+            <button type="submit" class="material-btn">Kirim OTP</button>
+        </form>
+    </div>
+</div>
+
+<script>
+document.getElementById("forgotForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    const email = document.getElementById("email").value;
+    if(!email) {
+        alert("Masukkan email yang valid!");
+        return;
+    }
+    // Simulasi kirim OTP
+    localStorage.setItem("resetEmail", email); // simpan email sementara
+    localStorage.setItem("otpCode", "123456"); // OTP simulasi
+    alert("Kode OTP telah dikirim ke email!");
+    window.location.href = "verify.html";
+});
+</script>
+</body>
+</html>
