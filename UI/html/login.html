@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Material Design Login Form</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../CSS/indexstyle.css">
 </head>
 <body>
     <div class="login-container">
         <div class="login-card">
-            <div class="login-header">
-                <h1>Sedela</h1>
-                <p>Masukkan Email dan Kata Sandi yang Terdaftar</p>
+                <img src="../assets/logo.png" alt="LOGO" class="material-logo">
+            <div class="login-instruction">
+                <p>Masukkan Email dan Kata Sandi Anda</p>
             </div>
             
-            <form class="login-form" id="loginForm" novalidate>
+              <form class="login-form" id="loginForm" novalidate>
                 <div class="form-group">
                     <div class="input-wrapper">
                         <input type="email" id="email" name="email" required autocomplete="email">
@@ -73,7 +73,7 @@
             </div>
 
             <div class="signup-link">
-                <p>Belum Punya Akun? <a href="#" class="create-account">Buat Akun</a></p>
+                <p>Belum Punya Akun? <a href="buat-akun.html" class="create-account">Buat Akun</a></p>
             </div>
 
             <div class="success-message" id="successMessage">
@@ -83,7 +83,7 @@
                             <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                         </svg>
                     </div>
-                    <h3>Selamat Datang!</h3>
+                    <h3 >Selamat Datang!</h3>
                     <p>Memasukkan Anda...</p>
                 </div>
             </div>
@@ -92,5 +92,6 @@
 
     <script src="../../shared/js/form-utils.js"></script>
     <script src="script.js"></script>
+  
 </body>
 </html>
