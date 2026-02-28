@@ -41,11 +41,10 @@ body {
     margin-bottom: 30px;
 }
 
-.material-logo {
-    width: 90px;
-    margin-bottom: 15px;
+.material-logo img {
+    display: block;
+    margin: 0 auto;
 }
-
 .login-header p {
     font-size: 14px;
     color: #777;
