@@ -1,185 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-    <title>Beranda</title>
-        <style>
-            /* ===== RESET ===== */
-            body {
-                margin: 0;
-                font-family: 'Segoe UI', sans-serif;
-                background: #f4f6f9;
-            }
-
-            /* ===== CONTAINER ===== */
-            .container {
-                padding: 20px;
-                max-width: 500px;
-                margin: auto;
-            }
-
-            /* ===== HEADER ===== */
-            .header {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                background: #cfe0f5;
-                padding: 15px 20px;
-                border-radius: 15px;
-            }
-
-            .logo {
-                font-size: 22px;
-                font-weight: bold;
-                color: #2d5fa8;
-                font-family: "Starlight Romance";
-                text-align: left;
-            }
-
-            .profile-wrapper {
-                position: relative;
-            }
-
-            .profile-icon {
-                width: 35px;
-                height: 35px;
-                background: #2d5fa8;
-                border-radius: 50%;
-                cursor: pointer;
-            }
-
-            /* ===== DROPDOWN ===== */
-            .dropdown {
-                position: absolute;
-                top: 45px;
-                right: 0;
-                background: white;
-                border-radius: 10px;
-                box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-                display: none;
-                min-width: 150px;
-            }
-
-            .dropdown a {
-                display: block;
-                padding: 10px;
-                text-decoration: none;
-                color: #333;
-            }
-
-            .dropdown a:hover {
-                background: #f0f0f0;
-            }
-
-            /* ===== WELCOME ===== */
-            .welcome {
-                margin: 25px 0;
-            }
-
-            .welcome h2 {
-                margin: 0;
-                font-weight: normal;
-            }
-
-            .welcome h1 {
-                margin: 5px 0 0;
-            }
-
-            /* ===== CARD MENU ===== */
-            .menu {
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
-            }
-
-            .menu a {
-                text-decoration: none;
-            }
-
-            .card {
-                background: #9e9e9e;
-                color: white;
-                padding: 35px 20px;
-                border-radius: 20px;
-                font-size: 18px;
-                font-weight: bold;
-                transition: 0.3s;
-            }
-
-            .card:hover {
-                transform: translateY(-5px);
-                background: #7e7e7e;
-            }
-
-            /* ===== RESPONSIVE ===== */
-            @media (min-width: 768px) {
-                .menu {
-                    flex-direction: row;
-                }
-
-                .card {
-                    flex: 1;
-                    text-align: center;
-                }
-            }
-        </style>
+    <meta charset="UTF-8">
+    <title>Dashboard - Sedela</title>
+    <link rel="stylesheet" href="../CSS/dashboard.css">
 </head>
 <body>
 
-<!--DASHBOARD CONTENT-->
+<div class="dashboard-container">
 
-<div class="container">
-
-    <!-- HEADER -->
-    <div class="header">
+    <!-- Header -->
+    <header class="dashboard-header">
         <div class="logo">Sedela</div>
-
-        <div class="profile-wrapper">
-            <div class="profile-icon" onclick="toggleDropdown()"></div>
-
-            <div class="dropdown" id="dropdownMenu">
-                <a href="#">Profil</a>
-                <a href="#">Pengaturan</a>
-                <a href="login.html">Logout</a>
-            </div>
+        <div class="user-info">
+            <span class="welcome-text">Selamat Datang,</span>
+            <h2 id="username">MUHAMMAD NAUFAL RAHMAT</h2>
         </div>
-    </div>
+    </header>
 
-    <!-- WELCOME -->
-    <div class="welcome">
-        <h2>Selamat Datang,</h2>
-        <h1>MUHAMMAD NAUFAL RAHMAT</h1>
-    </div>
+    <!-- Menu Cards -->
+    <section class="menu-section">
 
-    <!-- MENU -->
-    <div class="menu">
-        <a href="buka-rekening.html">
-            <div class="card">BUKA REKENING</div>
-        </a>
+        <div class="menu-card" id="bukaRekening">
+            <h3>BUKA REKENING</h3>
+        </div>
 
-        <a href="cek-status.html">
-            <div class="card">CEK STATUS</div>
-        </a>
+        <div class="menu-card" id="cekStatus">
+            <h3>CEK STATUS</h3>
+        </div>
 
-        <a href="ambil-antrian.html">
-            <div class="card">AMBIL ANTRIAN</div>
-        </a>
-    </div>
+        <div class="menu-card" id="ambilAntrian">
+            <h3>AMBIL ANTRIAN</h3>
+        </div>
+
+    </section>
 
 </div>
 
-<script>
-function toggleDropdown() {
-    const menu = document.getElementById("dropdownMenu");
-    menu.style.display = menu.style.display === "block" ? "none" : "block";
-}
-
-// Tutup dropdown kalau klik luar
-window.onclick = function(event) {
-    if (!event.target.matches('.profile-icon')) {
-        document.getElementById("dropdownMenu").style.display = "none";
-    }
-}
-</script>
-
+<script src="../javascript/dashboard.js"></script>
 </body>
 </html>
