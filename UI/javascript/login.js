@@ -286,3 +286,17 @@ if (!document.querySelector('#material-keyframes')) {
 document.addEventListener('DOMContentLoaded', () => {
     new MaterialLoginForm();
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const loginForm = document.getElementById("loginForm");
+
+    loginForm.addEventListener("submit", function (e) {
+        e.preventDefault(); // biar ga reload default
+
+        // langsung pindah ke dashboard
+        window.location.href = "dashboard.html";
+    });
+
+});

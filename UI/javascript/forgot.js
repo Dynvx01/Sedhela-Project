@@ -1,13 +1,16 @@
 document.getElementById("forgotForm").addEventListener("submit", function(e){
     e.preventDefault();
+
     const email = document.getElementById("email").value;
+
     if(!email) {
-        alert("Masukkan email yang valid!");
-        return;
+        return; // tidak perlu alert
     }
+
     // Simulasi kirim OTP
-    localStorage.setItem("resetEmail", email); // simpan email sementara
-    localStorage.setItem("otpCode", "123456"); // OTP simulasi
-    alert("Kode OTP telah dikirim ke email!");
+    localStorage.setItem("resetEmail", email);
+    localStorage.setItem("otpCode", "123456");
+
+    // langsung pindah
     window.location.href = "verify.html";
 });
