@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verifikasi OTP - Sedela</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../CSS/verify.css">
 </head>
 <!--MAIN VERIFY OTP PAGE CONTENT-->
 <body>
 <div class="login-container">
     <div class="login-card">
         <div class="login-header">
-            <h1>Sedela</h1>
+           <img src="../assets/logo.png" alt="LOGO" class="material-logo">
             <p>Masukkan Kode OTP yang Dikirim ke Email Anda</p>
         </div>
 
@@ -28,21 +28,7 @@
         </form>
     </div>
 </div>
-
-<script>
-document.getElementById("verifyForm").addEventListener("submit", function(e){
-    e.preventDefault();
-    const enteredOtp = document.getElementById("otp").value;
-    const otpCode = localStorage.getItem("otpCode");
-
-    if(enteredOtp === otpCode){
-        alert("OTP valid! Silahkan buat password baru.");
-        window.location.href = "reset-password.html";
-    } else {
-        alert("OTP salah! Cek kembali email Anda.");
-    }
-});
-</script>
+<script src="../javascript/verify.js"></script>
 </body>
 <!--END VERIFY OTP PAGE CONTENT-->
 </html>
