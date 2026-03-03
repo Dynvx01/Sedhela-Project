@@ -2,7 +2,8 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Dashboard - Sedela</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Sedhela Bank</title>
     <link rel="stylesheet" href="../CSS/dashboard.css">
 </head>
 <body>
@@ -11,11 +12,25 @@
 
     <!-- Header -->
     <header class="dashboard-header">
-        <img src="../assets/logo.png" alt="LOGO" class="material-logo">
-        <div class="user-info">
-            <span class="welcome-text">Selamat Datang</span>
-            <h2 id="username">ADMIN</h2>
+
+        <div class="header-left">
+            <img src="../assets/logo.png" alt="LOGO" class="material-logo">
         </div>
+
+        <div class="header-right">
+            <div class="user-menu">
+                <button id="userButton" class="user-button">
+                    👤 
+                </button>
+
+                <div id="dropdownMenu" class="dropdown-menu">
+                    <div class="dropdown-item">Profil</div>
+                    <div class="dropdown-item">Pengaturan</div>
+                    <div class="dropdown-item logout">Logout</div>
+                </div>
+            </div>
+        </div>
+
     </header>
 
     <!-- Menu Cards -->

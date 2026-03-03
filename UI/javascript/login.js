@@ -300,3 +300,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+const nama = document.getElementById("namaInput").value;
+
+// simpan ke localStorage
+localStorage.setItem("namaPengguna", nama);
+
+// pindah ke dashboard
+window.location.href = "dashboard.html";
