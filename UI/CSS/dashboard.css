@@ -119,3 +119,13 @@ body {
 .menu-card:hover {
     transform: translateY(-5px);
 }
+
+.welcome-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#welcomeText {
+    font-size: 25px;
+    font-weight: 600;
+}

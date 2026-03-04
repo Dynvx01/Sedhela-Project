@@ -1,5 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+    // ========================
+    // MENU CARD CLICK
+    // ========================
+
     document.getElementById("bukaRekening").addEventListener("click", function () {
         alert("Menu Buka Rekening diklik");
     });
@@ -12,7 +16,10 @@ document.addEventListener("DOMContentLoaded", function () {
         alert("Menu Ambil Antrian diklik");
     });
 
-    // Dropdown user
+    // ========================
+    // DROPDOWN USER
+    // ========================
+
     const userButton = document.getElementById("userButton");
     const dropdownMenu = document.getElementById("dropdownMenu");
 
@@ -25,5 +32,16 @@ document.addEventListener("DOMContentLoaded", function () {
     document.addEventListener("click", function () {
         dropdownMenu.style.display = "none";
     });
+
+    // ========================
+    // WELCOME TEXT
+    // ========================
+
+    const name = localStorage.getItem("fullName");
+    const userName = document.getElementById("userName");
+
+    if (name && userName) {
+        userName.textContent = name.toUpperCase();
+    }
 
 });
