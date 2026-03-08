@@ -45,3 +45,32 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
+
+// ========================
+// DROPDOWN MENU ACTION
+// ========================
+
+const profilMenu = document.getElementById("profilMenu");
+const pengaturanMenu = document.getElementById("pengaturanMenu");
+const logoutMenu = document.getElementById("logoutMenu");
+
+// Profil
+profilMenu.addEventListener("click", function () {
+    window.location.href = "profil.html";
+});
+
+// Pengaturan
+pengaturanMenu.addEventListener("click", function () {
+    window.location.href = "pengaturan.html";
+});
+
+// Logout
+logoutMenu.addEventListener("click", function () {
+
+    // hapus semua data user
+    localStorage.clear();
+
+    // langsung pindah ke login
+    window.location.href = "../HTML/login.html";
+
+});
